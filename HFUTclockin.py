@@ -7,6 +7,7 @@ from Crypto.Cipher import AES
 import base64
 import re
 from urllib.parse import quote
+import random
 
 
 requests = requests.session()
@@ -227,8 +228,13 @@ def submit(usn,psw,adds):
     print('登录失败哦....')
     os.system('pause')
 
+def delayTime():
+    delayTimeSec = random.randint(0, 1800)
+    time.sleep(delayTimeSec)
+
 if __name__ == "__main__":
     if len(sys.argv) != 4:
         print("python3 HFUTclockin.py 学号 密码 定位地址")
         exit()
+    delayTime()
     submit(sys.argv[1], sys.argv[2], sys.argv[3])
