@@ -236,5 +236,7 @@ if __name__ == "__main__":
     if len(sys.argv) != 4:
         print("python3 HFUTclockin.py 学号 密码 定位地址")
         exit()
+    print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
     delayTime()
+    print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
     submit(sys.argv[1], sys.argv[2], sys.argv[3])
