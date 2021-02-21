@@ -239,4 +239,7 @@ if __name__ == "__main__":
     print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
     delayTime()
     print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
-    submit(sys.argv[1], sys.argv[2], sys.argv[3])
+    try:
+        submit(sys.argv[1], sys.argv[2], sys.argv[3])
+    except:
+        exit()
